@@ -12,6 +12,7 @@ import com.inthemornin.ootd.model.ClothesVO;
 
 @Repository
 public class ClothRepository implements IRepository{
+	
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 	private class ClothMapper implements RowMapper<ClothesVO> {
@@ -19,13 +20,13 @@ public class ClothRepository implements IRepository{
 		public ClothesVO mapRow(ResultSet rs, int count) 
 				throws SQLException {
 			ClothesVO cloth = new ClothesVO();
-			cloth.setCloth_id(rs.getInt("employee_id"));
-			cloth.setCloth_type(rs.getString("first_name"));
-			cloth.setOutfits_type(rs.getString("last_name"));
-			cloth.setCust_id(rs.getString("email"));
-			cloth.setColor(rs.getString("phone_number"));
-			cloth.setSeason(rs.getString("hire_date"));			
-
+			cloth.setCloth_id(rs.getInt("cloth_id"));
+			cloth.setCloth_type(rs.getString("cloth_type"));
+			cloth.setOutfits_type(rs.getString("outfits_type"));
+			cloth.setCust_id(rs.getString("cust_id"));
+			cloth.setColor(rs.getString("color"));
+			cloth.setSeason(rs.getString("season"));			
+			
 			return cloth;
 		}			
 	}

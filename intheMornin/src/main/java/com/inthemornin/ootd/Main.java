@@ -17,6 +17,8 @@ public class Main {
 			System.out.println("-- 사원의 수 조회");
 			System.out.println(clothService.getClothCount());
 			System.out.println(clothService.getClothCount(10));
+			
+		context.close();
 	}
 
 }
