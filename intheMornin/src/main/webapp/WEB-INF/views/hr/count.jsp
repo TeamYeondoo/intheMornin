@@ -6,6 +6,6 @@
 <title>CoderBy</title>
 </head>
 <body>
-<h1>옷의 수 : ${count}</h1>
+<h1>옷의 갯수 : ${count}</h1>
 </body>
 </html>
