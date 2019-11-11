@@ -5,5 +5,7 @@ import java.util.Map;
 
 
 public interface IRepository {
+	int getClothCount();
+	int getClothCount(int deptid);
 	
 }
