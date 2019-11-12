@@ -9,6 +9,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.inthemornin.ootd.model.ClothesVO;
+import com.inthemornin.ootd.model.CustomerVO;
 
 @Repository
 public class ClothRepository implements IRepository{
@@ -32,14 +33,20 @@ public class ClothRepository implements IRepository{
 	}
 	
 	@Override
-	public int getClothCount() {
+	public int getCount() {
 		String sql = "select count(*) from clothes";
 		return jdbcTemplate.queryForObject(sql, Integer.class);
 	}
 
 	@Override
-	public int getClothCount(int deptid) {
+	public int getCount(int deptid) {
 		String sql = "select count(*) from clothes where cloth_id=?";
 		return jdbcTemplate.queryForObject(sql, Integer.class, deptid);
 	}
+	
+	@Override
+	public void insertCust(CustomerVO cust) {
+		/// NO USING THIS METHOD IN THIS CLASS
+	}
+	
 }
